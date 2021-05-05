@@ -1,6 +1,7 @@
 .header{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     height: 10vh;
     padding: 10px 20px;
     justify-content: space-between;
@@ -112,4 +113,9 @@ border-radius: 5px;
 background-color: transparent;
 border: 1px solid #37A866;
 color: #000;
+}
+@media(max-width:1200px){
+    .header{
+        height: auto;
+    }
 }

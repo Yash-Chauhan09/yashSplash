@@ -1,13 +1,13 @@
 .cards{
    position: relative;
+   margin: 15px;
 }
 .cards img{
-    width: 100%;
+    width: 400px;
     height: auto;
+    max-height: 500px;
     cursor:zoom-in;
     background-color: none;
-    
-
 }
 .cards img:hover{
     opacity: 0.7;
@@ -18,9 +18,8 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 15px;
-    position: absolute;
-    top: 20px;
+    padding: 5px;
+   background-color: #f8f8f8;
 }
 .cards__detailOwner{
     display: flex;
@@ -30,27 +29,15 @@
     font-size: 15px;
     margin-left: 8px;
 }
+.cards__detailOwner h5 span{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .cards__icon{
     width: 30px !important;
-    margin-right: 10px;
     background-color: #37A866;
     color: white !important;
     border-radius: 50%;
-}
-.cards__icon :hover{
-   background-color: black !important;
-}
-.cards__desc{
-    /* opacity: 0; */
-    position: absolute;
-    font-size: small;
-    top: 220px;
-    left: 70px;
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-/* visibility: hidden; */
-}
-.cards > img:hover .cards__desc{
-opacity: 1;
-visibility: visible;
+    margin-left: 10px;
 }

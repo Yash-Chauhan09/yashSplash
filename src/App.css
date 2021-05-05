@@ -7,9 +7,13 @@ html{
   scroll-behavior: smooth;
 }
 .app__cards{
-  margin-top: 45px;
+  margin-top: 50px;
   padding: 0 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap:25px
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.App__signup{
+  display: flex ;
+  flex-direction: column;
 }

@@ -1,13 +1,8 @@
 import { Avatar } from '@material-ui/core'
-import React, { useState } from 'react'
+import React from 'react'
 import './Cards.css'
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-function Cards({img}) {
-    const[display, setDisplay] = useState('none')
-    const handleShow =() =>{
-        setDisplay('flex')
-    }
+function Cards({img,desc,user}) {
     const download = () =>{
       console.log(img)
       fetch(img, {
@@ -28,14 +23,13 @@ function Cards({img}) {
     }
     return (
         <div className='cards'>
-           <img onMouseMove={handleShow} src={img} alt="thumbnail" />
-           <div className="cards__detail" style={{display:display}}>
+           <img  src={img} alt="thumbnail" />
+           <div className="cards__detail">
                <div className="cards__detailOwner">
                    <Avatar />
-                  <h5>Yash Chauhan</h5> 
+                  <h5>{user} : <span>{desc}</span></h5> 
                </div>
                <div className="card__detailIcons">
-               <FavoriteBorderIcon className='cards__icon'/>
                <ArrowDownwardIcon onClick={download} className='cards__icon'/>
                </div>
            </div>
