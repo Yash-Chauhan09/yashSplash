@@ -17,3 +17,24 @@ html{
   display: flex ;
   flex-direction: column;
 }
+.app__submit{
+  display: flex;
+  flex-direction: column;
+}
+.app__submit progress{
+  width: 100%;
+  color: #37A866;
+}
+.app__submitInput1{
+padding: 6px 15px;
+border: none;
+background-color: #37a8661f;
+outline: none;
+font-size: 1rem;
+margin: 5px 0;
+}
+.app__submitInput2{
+padding: 6px 15px;
+font-size: 1rem;
+margin: 5px 0;
+}

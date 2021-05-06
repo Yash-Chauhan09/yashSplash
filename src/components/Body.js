@@ -2,7 +2,7 @@ import React from "react";
 import "./Body.css";
 import SearchIcon from "@material-ui/icons/Search";
 
-function Body() {
+function Body({value,change}) {
   return (
     <div className="body">
       <div className="body__info">
@@ -13,7 +13,9 @@ function Body() {
         </div>
         <div className="body__search">
           <SearchIcon classname="body__searchIcon" />
-          <input type="text" placeholder="Search free high resolution photos" />
+          <input type="text" placeholder="Search free high resolution photos" value={value} onChange={(e)=>{
+          change(e.target.value)
+          }} />
         </div>
         <p className='body__trending'>Trending: flower, wallpapers, backgrounds, happy, love</p>
       </div>

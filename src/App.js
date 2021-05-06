@@ -192,6 +192,7 @@ function App() {
               <div className="app__submit">
               <progress value={progress} max="100"/>
               <input
+              className='app__submitInput1'
                 type="text"
                 placeholder="Enter a caption"
                 value={caption}
@@ -199,8 +200,8 @@ function App() {
                   setCaption(e.target.value);
                 }}
               />
-              <input type="file" onChange={handleChange} />
-              <Button onClick={handleUpload}> Upload</Button>
+              <input className='app__submitInput2'  type="file" onChange={handleChange} />
+              <Button style={{backgroundColor:'#37A866'}} onClick={handleUpload}> Upload🐱‍👤</Button>
               </div>
             ):
               <h2>Sorry need to login first</h2>
@@ -229,7 +230,7 @@ function App() {
           <div className="header__rightExplore">
             <a href="#images">Explore</a>
             <MoreHorizIcon />
-            <button onClick={() => setOpensubmit(true)}>Submit a photo</button>
+            <button onClick={() => setOpensubmit(true)}>Submit a photo📸</button>
           </div>
           <div className="header__rightJoin">
             {users ? (
@@ -251,13 +252,13 @@ function App() {
           </div>
         </div>
       </div>
-      <Body />
+      <Body value={input} change={setInput} />
       <div id="images" className="app__cards">
         {photos.filter(({photo})=>{
    if(input===''){
      return photo
    }
-   else if(input.match(`${photo.desc}`)){
+   else if(`${photo.desc}`.includes(input)){
      return photo
    }
         }).map(({ photo, id }) => {

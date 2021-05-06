@@ -6,8 +6,7 @@ function Cards({img,desc,user}) {
     const download = () =>{
       console.log(img)
       fetch(img, {
-          method:"GET",
-          headers: {}
+          method:"GET"
       }).then(res =>{
           res.arrayBuffer().then(function(buffer){
               const url = window.URL.createObjectURL(new Blob([buffer]))
